@@ -1,17 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-    
-</head>
-<body>
-   
-    <canvas id="my-canvas"></canvas>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="style.css" />
+        <script
+            src="https://kit.fontawesome.com/d155412c3e.js"
+            crossorigin="anonymous"
+        ></script>
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap"
+            rel="stylesheet"
+        />
+        <title>Document</title>
+    </head>
+    <body>
+        <div class="container">
+            <div class="tools item">
 
-    
-</body>
-<script src="script.js"></script>
+                <div class="color-picker">
+                    <p>Brush Color</p>
+                    <input id="colorPicker" type="color" />
+                </div>
+
+                <div class="clear-tool">
+                    <p>Tools</p>
+
+                    <div class="erase-brush">
+
+                        <div class="erase-con">
+                            <button name="erase" class="erase-btn btn" id="erase">
+                                <i class="fas fa-eraser"></i>
+                            </button>
+                        </div>
+
+                        <div>
+                            <button name="brush" class="brush-btn btn" id="brush">
+                                <i class="fas fa-paint-brush"></i>
+                            </button>
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+                <div class="stroke-tool">
+                    <p>Stroke</p>
+
+                    <input
+                        type="range"
+                        min="1"
+                        max="80"
+                        value="10"
+                        class="slider"
+                        id="stroke"
+                    />
+                </div>
+
+
+                <div>
+                  <button class="clearButton" name="clearButton" id="clear">Clear</button>
+              </div>
+
+                <div>
+                    <a
+                        class="download-btn"
+                        download="image.png"
+                        href=""
+                        onclick="downloadCanvas(this);"
+                        >Download</a
+                    >
+                </div>
+
+            </div>
+
+            <canvas
+                class="mycanvas"
+                id="canvas"
+                style="
+                    
+
+                    margin: auto;
+                    left: 0;
+                    right: 0;
+                "
+            ></canvas>
+        </div>
+    </body>
+    <script src="script.js"></script>
 </html>
